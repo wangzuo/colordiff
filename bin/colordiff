@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+var spawn = require('child_process').spawn;
+var through2 = require('through2');
+var colors = require('colors');
+var detect = require('../lib/detect');
+var lineColor = require('../lib/line-color');
+
+colors.setTheme({
+  line: 'cyan',
+  add: 'green',
+  delete: 'red',
+  separator: 'grey',
+  change: 'blue'
+});
+
+var _fl = true;
+var _mode = 'normal';
+var args = process.argv.slice(2);
+var _in = args.length ? spawn('diff', args).stdout : process.stdin;
+
+_in.pipe(through2(function(chunk, enc, callback) {
+  var self = this;
+  chunk = chunk.toString();
+  var lines = chunk.split(/\r\n|\r|\n/g);
+
+  lines.forEach(function(line) {
+    if(_fl) {
+      _mode = detect(line);
+      _fl = false;
+    }
+    if(line) {
+      var color = lineColor(_mode, line);
+      self.push((color ? line[color]: line) + '\n');
+    }
+  });
+  callback();
+})).pipe(process.stdout);

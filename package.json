@@ -1,0 +1,36 @@
+{
+  "name": "colordiff",
+  "version": "1.0.0",
+  "description": "colordiff",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "bin": {
+    "colordiff": "./bin/colordiff"
+  },
+  "author": "Wang Zuo",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.0.3",
+    "through2": "^0.6.5"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.4"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangzuo/colordiff.git"
+  },
+  "keywords": [
+    "color",
+    "diff"
+  ],
+  "bugs": {
+    "url": "https://github.com/wangzuo/colordiff/issues"
+  },
+  "homepage": "https://github.com/wangzuo/colordiff"
+}
