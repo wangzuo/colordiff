@@ -29,6 +29,7 @@ describe('line-color', function() {
     assert.equal(lineColor('context', "*** 1,3 ****"), 'line');
     assert.equal(lineColor('context', '--- 11,20 ----'), 'line');
     assert.equal(lineColor('context', '+ therefore be located at'), 'add');
+    assert.equal(lineColor('context', '- therefore be located at'), 'delete');
     assert.equal(lineColor('context', '! compress the size of the'), 'change');
     assert.equal(lineColor('unified', '  It is important to spell'), null);
   });
