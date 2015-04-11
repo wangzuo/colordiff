@@ -1,7 +1,7 @@
 {
   "name": "colordiff",
-  "version": "1.0.1",
-  "description": "colordiff",
+  "version": "1.0.2",
+  "description": "wrapper for diff with color output",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
