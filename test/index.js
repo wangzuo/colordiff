@@ -17,6 +17,10 @@ describe('detect', function() {
 });
 
 describe('line-color', function() {
+  it('null mode', function() {
+    assert.equal(lineColor(null, '0a1,6'), null);
+  });
+
   it('normal', function() {
     assert.equal(lineColor('normal', '0a1,6'), 'line');
     assert.equal(lineColor('normal', '> This is an important'), 'add');

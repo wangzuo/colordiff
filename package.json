@@ -1,6 +1,6 @@
 {
   "name": "colordiff",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "wrapper for diff with color output",
   "main": "index.js",
   "scripts": {

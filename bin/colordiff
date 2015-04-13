@@ -14,8 +14,7 @@ colors.setTheme({
   change: 'blue'
 });
 
-var _fl = true;
-var _mode = 'normal';
+var _mode = null;
 var args = process.argv.slice(2);
 var _in = args.length ? spawn('diff', args).stdout : process.stdin;
 
@@ -25,10 +24,8 @@ _in.pipe(through2(function(chunk, enc, callback) {
   var lines = chunk.split(/\r\n|\r|\n/g);
 
   lines.forEach(function(line) {
-    if(_fl) {
-      _mode = detect(line);
-      _fl = false;
-    }
+    if(!_mode) _mode = detect(line);
+
     if(line) {
       var color = lineColor(_mode, line);
       self.push((color ? line[color]: line) + '\n');
