@@ -15,4 +15,8 @@ npm install colordiff -g
 colordiff new original # wrap
 diff new original | colordiff # piping
 ```
-
+svn diff (~/.subversion/config)
+``` diff
+- # diff-cmd = diff_program (diff, gdiff, etc.)
++ diff-cmd = colordiff
+```
