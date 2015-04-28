@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/wangzuo/colordiff.svg?branch=master)](https://travis-ci.org/wangzuo/colordiff)
-
-# colordiff
+# colordiff [![Build Status](https://travis-ci.org/wangzuo/colordiff.svg?branch=master)](https://travis-ci.org/wangzuo/colordiff)
 wrapper for diff with color output
 
 [![NPM](https://nodei.co/npm/colordiff.png?compact=true)](https://nodei.co/npm/colordiff/)
