@@ -18,3 +18,7 @@ svn diff (~/.subversion/config)
 - # diff-cmd = diff_program (diff, gdiff, etc.)
 + diff-cmd = colordiff
 ```
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wangzuo/colordiff/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
