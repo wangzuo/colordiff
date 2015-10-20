@@ -18,3 +18,5 @@ svn diff (~/.subversion/config)
 - # diff-cmd = diff_program (diff, gdiff, etc.)
 + diff-cmd = colordiff
 ```
+## License
+MIT
