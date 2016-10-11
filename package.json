@@ -16,7 +16,7 @@
     "through2": "^0.6.5"
   },
   "devDependencies": {
-    "mocha": "^2.2.4"
+    "mocha": "^3.1.2"
   },
   "directories": {
     "test": "test"
