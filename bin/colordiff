@@ -22,6 +22,7 @@ _in.pipe(through2(function(chunk, enc, callback) {
   var self = this;
   chunk = chunk.toString();
   var lines = chunk.split(/\r\n|\r|\n/g);
+  if (lines.length) lines = lines.slice(1);
 
   lines.forEach(function(line) {
     if(!_mode) _mode = detect(line);
